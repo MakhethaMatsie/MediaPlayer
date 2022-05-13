@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment2.HelloController">
+   <top>
+      <HBox prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Slider fx:id="timer" prefHeight="14.0" prefWidth="550.0">
+               <HBox.margin>
+                  <Insets left="25.0" top="20.0" />
+               </HBox.margin>
+            </Slider>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <MediaView fx:id="mediaView" fitHeight="300.0" fitWidth="510.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="play" mnemonicParsing="false" onMouseClicked="#playVideo" text="Play">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="pause" mnemonicParsing="false" onMouseClicked="#pauseVideo" text="Pause">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="stop" mnemonicParsing="false" onMouseClicked="#stopVideo" text="Stop">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets top="15.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <left>
+      <VBox maxHeight="180.0" prefHeight="180.0" prefWidth="80.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Volume">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <Slider fx:id="sound" orientation="VERTICAL" prefHeight="160.0" prefWidth="14.0">
+               <VBox.margin>
+                  <Insets left="25.0" top="23.0" />
+               </VBox.margin>
+            </Slider>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>
